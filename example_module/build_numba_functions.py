@@ -15,6 +15,7 @@ from example_module import (  # noqa: E402
     increment_global_counter_function,
     get_global_counter,
     global_counter_spec,
+    sum_to_x,
 )
 
 # pylint: enable=wrong-import-position
@@ -33,6 +34,7 @@ with open("example_module.ll", "w+", encoding="utf-8") as out_file:
                 specially_named_new_array_function,
                 increment_global_counter_function,
                 get_global_counter,
+                sum_to_x,
             ),
             (global_counter_spec,),
         )

@@ -74,3 +74,11 @@ def increment_global_counter_function():
 def get_global_counter() -> np.uint32:
     """Function that returns the global variable ``global_counter``"""
     return global_counter_getter()
+
+@njit_wasm
+def sum_to_x(x: np.uint32) -> np.uint32:
+    s = np.uint32(0 * x)
+    for i in np.arange(1, x + 1):
+        s = s + np.uint32(i)
+    return s
+
