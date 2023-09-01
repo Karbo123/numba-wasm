@@ -54,6 +54,7 @@
       }
       setup_pyodide().then(() => {
         pyodide.runPython("import example_module");
+        pyodide.runPython('print(f"{example_module.sum_to_x(100)=}")');
         pyodide.runPython('print(f"{example_module.square(11.0)=}")');
         pyodide.runPython('print(f"{example_module.new_array_function()=}")');
         pyodide.runPython(
